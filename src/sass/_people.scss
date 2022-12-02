@@ -1,0 +1,129 @@
+@import "./variables";
+@import "./mixins";
+
+.people-are-talking {
+    width: 320px;
+    height: 100%;
+    padding-top: 57px;    
+    background-image: url("/img/testmonials-bg320.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    .title {
+        @include fontParameters(700, 36px, 48px, #FFFFFF);
+        margin-bottom: 53px;
+    }
+
+    .grid-container {
+        height: 1175px;
+        
+        .grid-container__item {
+            height: 162px;
+            margin-bottom: 45px;
+            
+            .logo1 {
+                width: 165px;
+                height: 43px;
+            }
+
+            .logo2 {
+                width: 148px;
+                height: 50px;
+            }
+
+            .logo3 {
+                width: 64px;
+                height: 64px;
+            }
+
+            .logo4 {
+                width: 225px;
+                height: 24px;
+            }
+
+            .logo5 {
+                width: 166px;
+                height: 34px;
+            }
+
+            .logo6 {
+                width: 108px;
+                height: 34px;
+            }
+
+            .text {
+                margin: auto;
+                margin-top: 33px;
+                @include LatoItalic;
+                @include fontParameters (700, 16px, 24px, #FFFFFF);
+            }
+
+            .text1 {
+                margin-top: 33px;
+            }
+
+            .text2 {
+                
+                width: 266px;
+                height: 83px;
+                
+                margin-top: 29px;
+
+            }
+
+            .text3 {
+
+                width: 245px;
+                height: 85px;
+                margin-top: 22px;
+
+            }
+
+            .text4 {
+                width: 271px;
+                height: 86px;
+                margin-top: 33px;
+
+            }
+
+            .text5 {
+                width: 280px;
+                height: 85px;
+                margin-top: 28px;
+
+            }
+
+            .text6 {
+                width: 246px;
+                height: 107px;
+                margin-top: 24px;
+
+            }
+        }
+
+
+    }
+
+    .bottom-note {
+        @include LatoFont;
+        @include fontParameters (400, 14px, 21px, #A291A5);
+        margin: auto;
+        margin-top: 47px;
+        margin-bottom: 22px;
+        padding-left: 25px;
+        padding-right: 25px;
+        width: auto;
+        height: 150px;
+        &::after {
+            content: "";
+            display: block;
+            margin-top: 22px;
+            border-bottom: 2px solid #A291A5;
+        }
+    }
+}
+
+
+

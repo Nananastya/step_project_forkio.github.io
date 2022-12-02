@@ -1,0 +1,839 @@
+@import "./variables";
+@import "./mixins";
+@import "./header";
+@import "./people";
+@import "./revolutionary";
+@import "./here-is-what";
+@import "./fork-subscription";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    display: block;
+}
+
+body {
+    @include MontserratFont;
+}
+
+.inactive {
+    display: none;
+}
+
+/* 320 */
+
+@media (max-width: 480px){
+
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
+    }
+    
+    .header {
+        width: 100%;
+        min-width: 320px;
+        background-color: #27262A;
+        
+        .nav {
+            height: 103px;
+
+            .nav__top-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+                width: 100%;
+
+                .logo {
+                    width: 43px;
+                    height: 41px;
+                    @include logo;
+                    &:hover {
+                        @include logo-hover;
+                    }
+                }
+
+                .buy-now__btn {
+                    width: 119px;
+                    height: 37px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 15px, 15px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;
+                    }
+                }
+                
+                .logo-name {
+                    display: none;
+                }
+
+                .burger-menu__logo {
+                    cursor: pointer;
+                    @include menuLogo;             
+                }
+        
+                .x {
+                    cursor: pointer;
+                    @include menuLogo;
+                }
+            }
+    
+            .nav__bottom-container {
+                display: none;
+
+                .nav__menu {
+                    display: none;
+
+                    .nav__menu__item {
+                        display: none;
+                    }
+                }
+            }            
+        }
+    }
+
+    
+    .burger-menu {
+        @include absolute-center; 
+        width: 292px;
+        height: 364px;
+        overflow: visible;
+        background-color: #333333;
+    
+        .burger-menu__item {
+            text-align: start;
+            padding-left: 48px;
+            @include fontParameters (400, 26px, 26px, $btnColor);
+            &:focus {
+                color: $btnColorHover;
+            }
+            &:focus::before{
+                @include pseudo;                
+            }
+
+            display: block;        
+            height: 88px;
+            padding-top: 29px;
+            border-bottom: 3px solid #3a3a3a;
+            color: $btnColor;                  
+        }
+
+        .burger-menu__item-one {
+            &:hover::before {
+                @include pseudo;
+                top: 17px;
+            }
+        }
+
+        .burger-menu__item-two {
+            &:hover::before {
+                @include pseudo;
+                top: 102px;                
+            }
+        }
+        
+        .burger-menu__item-three {
+            &:hover::before {
+                @include pseudo;
+                top: 192px;
+            }
+        }
+
+        .burger-menu__item-four {
+            &:hover::before {
+                @include pseudo;
+                top: 280px;
+            }
+        }        
+    }
+    
+    .section-one {
+        position: relative;
+        min-width: 320px;
+        width: 100%;
+        text-align: center;
+        .main {
+            height: 614px;
+            background-image: url(./img/img3.png);
+            background-position: center;  
+            background-size: contain;
+                   
+            .main__title {
+                @include fontParameters(700, 48px, 48px, #FFFFFF);
+            }   
+        
+            .main__subtitle {
+                @include fontParameters(400, 18px, 24px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .main__note {
+                @include fontParameters(400, 14px, 14px, #848E97);
+                margin-top: 14px;
+                display: block;
+                text-transform: uppercase;
+            }    
+        }    
+    }
+    
+    .download__btn {        
+        @include absolute-center; 
+        top: 590px;
+        width: 290px;
+        height: 45px;
+        padding-top: 13px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 18px, 20px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+            border: 2px solid #8D81AC;
+            padding-top: 21px;
+        }    
+    }
+    
+    .unlimited {
+        margin-top: 36px;
+        @include fontParameters(400, 14px, 14px, #848E97)
+    }
+
+    .people-are-talking {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 22px;
+        min-width: 320px;
+        padding-top: 57px;    
+        background-image: url("/img/testmonials-bg320.png");
+        @include bg-center;
+        text-align: center;
+            
+        .peolpe-are-talking__title {
+            @include fontParameters(700, 36px, 48px, #FFFFFF);
+            margin-bottom: 53px;
+        }
+    
+        .grid-container {
+            height: 1175px;           
+           
+            .grid-container__item {
+                height: 162px;
+                margin-bottom: 45px;
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                }
+    
+                .text {
+                    margin: auto;
+                    margin-top: 33px;
+                    @include LatoFont;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1 {
+                    margin-top: 33px;
+                }
+    
+                .text2 {
+                    margin-top: 29px;    
+                }
+    
+                .text3 {    
+                    margin-top: 22px;    
+                }
+    
+                .text4 {
+                    margin-top: 33px;    
+                }
+    
+                .text5 {
+                    margin-top: 28px;    
+                }
+    
+                .text6 {
+                    margin-top: 24px;    
+                }
+            }
+        }
+    
+        .bottom-note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 47px;
+            margin-bottom: 0;
+            padding-left: 25px;
+            padding-right: 25px;
+            width: auto;
+            height: 150px;
+            &::after {
+                content: "";
+                display: block;
+                margin-top: 22px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+}
+/* 768 */
+
+@media (min-width: 481px) {
+    .container {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;     
+    }
+    
+    .header {   
+        width: 100%;     
+        text-align: center;
+        background-color: #27262A;
+        
+        .nav {
+            height: 118px;
+            padding-top: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav__top-container {
+                @include flexCenter;
+                width: 100%;
+
+                .logo {
+                    width: 43px;
+                    height: 41px;
+                    background-image: url("./img/Logo.png");
+                    @include bg-center;
+                    &:hover {
+                        background-image: url("./img/Logo-hover.png");
+                        @include bg-center;
+                    }
+                }
+
+                .logo-box {
+                    height: 41px;
+                    @include flexCenter;
+                }
+
+                .logo {
+                    margin-left: 10px;
+                    display: inline-block;                    
+                }
+
+                .logo-name {
+                    text-transform: uppercase; 
+                    display: inline-block;
+                    width: 120px;             
+                    @include LatoFont;
+                    @include fontParameters (700, 24px, 16px, #8D81AC);
+                    &:hover {
+                        color: $btnColor;
+                    }                    
+                }
+        
+                .buy-now__btn {
+                    width: 145px;
+                    height: 38px;
+                    margin-right: 10px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 15px, 15px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;
+                    }
+                }              
+            }
+
+            .nav__bottom-container {
+                .nav__menu {
+                    
+                    min-width: 450px;
+                    width: 70vw;
+                    display: flex;
+                    justify-content: space-between;                 
+                    margin-bottom: 18px;
+
+                    
+                    .nav__menu__item{                        
+                        display: inline-block;
+                        @include fontParameters (700, 16px, 18px, #8D81AC);
+                        &:hover {
+                            color: $btnBackgroundHover;
+                        }
+                    }
+                } 
+            }
+
+            .burger-menu__logo {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }
+    
+            .x {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }           
+        }    
+    }
+    
+    .section-one {
+        position: relative;
+        width: 100%;
+        
+        text-align: center;
+        .main {
+            height: 702px;
+            background-image: url(./img/main-img.png);
+            @include bg-center;
+        
+            
+            .main__title {
+                @include fontParameters(700, 72px, 72px, #FFFFFF);
+            }   
+        
+            .main__subtitle {
+                @include LatoFont;
+                @include fontParameters(400, 24px, 24px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .main__note {
+                @include fontParameters(400, 14px, 14px, #848E97);
+                margin-top: 19px;
+                display: block;
+                text-transform: uppercase;
+            }    
+        }    
+    }
+    
+    .download__btn {
+        position: absolute;
+        top: 668px;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 390px;
+        height: 62px;
+        padding-top: 23px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 21px, 23px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+            border: 2px solid #8D81AC;
+            padding-top: 21px;
+        }
+    }
+    
+    .unlimited {
+        margin-top: 48px;
+        @include fontParameters(400, 14px, 16px, #848E97)
+    }
+
+    .people-are-talking {
+        border: 1px solid #645766;
+        width: 100%;
+        height: 100%;
+        padding-top: 86px;    
+        background-image: url("/img/testimonials-bg768.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        
+    
+        .peolpe-are-talking__title {
+            @include fontParameters(700, 42px, 44px, #FFFFFF);
+            margin-bottom: 88px;
+        }
+    
+        .grid-container {
+            width: auto;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            margin-bottom: 68px;           
+    
+            .grid-container__item {
+                height: auto;
+                width: auto;
+                margin: 0;          
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                    margin-bottom: 29px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                    margin-top: 24px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                    margin-bottom: 30px;
+                }
+    
+                .text {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    @include LatoItalic;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1, .text2, .text3, .text4, .text5, .text6 {
+                    @include text;   
+                }
+            }
+        
+        }
+    
+        .bottom-note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 77px;
+            margin-bottom: 28px;
+            width: 100%;
+            height: 56px;
+            &::after {
+                content: "";
+                display: block;
+                margin: auto;
+                margin-top: 19px;
+                max-width: 555px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+}
+/* 1200 */
+
+@media (min-width: 993px) {
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+        max-width: 1380px;
+        margin: auto;      
+    }
+    
+    .header {        
+        min-width: 1380px;
+        height: auto;
+        text-align: center;
+        background-color: #000;    
+        
+        .nav {
+            position: relative;
+            height: 71px;
+            padding-top: 22px;
+            padding-bottom: 22px;
+            @include flexCenter;
+            flex-direction: column;
+
+            .nav__top-container {
+                @include flexCenter;
+                width: 100%;
+
+                .logo-box {
+                    width: 180px;
+                    height: 41px;
+                    margin-left: 80px;
+                    /* border: 1px solid red; */
+                    @include flexCenter;
+                }
+
+                .logo {
+                    width: 43px;
+                    height: 41px;
+                    background-image: url("./img/Logo.png");
+                    @include bg-center;
+                    &:hover {
+                        background-image: url("./img/Logo-hover.png");
+                        @include bg-center;
+                    }
+                }
+
+                .logo-name {
+                    text-transform: uppercase;                    
+                    @include LatoFont;
+                    @include fontParameters (700, 24px, 16px, #8D81AC);
+                }
+        
+                .buy-now__btn {
+                    width: 145px;
+                    height: 37px;
+                    margin-right: 80px;
+                    background-color: $btnBackground;
+                    border-radius: 40px;
+                    padding-top: 11px;
+                    @include fontParameters(700, 16px, 17px, $btnColor);
+                    &:hover {
+                        background-color: $btnBackgroundHover;
+                        color: $btnColorHover;                        
+                    }
+                }              
+            }
+
+            .nav__bottom-container {
+                position: absolute;
+                top: 35px;
+                margin-left: 300px;
+                
+                .nav__menu {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    width: 517px;
+                    @include flexCenter;
+                    .nav__menu__item{
+                        @include fontParameters (700, 16px, 17px, #8D81AC);
+                        &:hover {
+                            color: $btnBackgroundHover;
+                        }
+                    }
+                } 
+            }
+
+            .burger-menu__logo {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }
+    
+            .x {
+                cursor: pointer;
+                @include menuLogo;
+                display: none;
+            }           
+        }    
+    }
+    
+    .section-one {
+        position: relative;
+        min-width: 1380px;      
+        text-align: center;
+        .main {
+            padding-top: 113px;
+            height: 730px;
+            background-image: url(./img/main-img.png);
+            background-position: center;  
+            background-size: 100% 100%;
+            background-repeat: no-repeat;       
+            
+            .main__title {
+                @include fontParameters(700, 82px, 82px, #FFFFFF);
+                margin: 0;
+            }   
+        
+            .main__subtitle {
+                @include LatoFont;
+                @include fontParameters(400, 30px, 30px, #8D81AC);
+                margin-top: 19px;
+            }
+        
+            .main__note {
+                @include fontParameters(400, 16px, 16px, #848E97);
+                margin-top: 19px;
+                display: block;
+                text-transform: uppercase;
+            }    
+        }    
+    }
+    
+    .download__btn {
+        @include absolute-center;
+        top: 700px;
+        width: 390px;
+        height: 62px;
+        padding-top: 23px;
+        background-color: $btnBackground;
+        border-radius: 40px;
+        @include fontParameters(700, 21px, 22px, $btnColor);
+        &:hover {
+            background-color: $btnBackgroundHover;
+            color: $btnColorHover;
+            border: 2px solid #8D81AC;
+            padding-top: 21px;
+        }
+    
+    }
+    
+    .unlimited {
+        margin-top: 48px;
+        @include fontParameters(400, 14px, 16px, #848E97)
+    }
+
+    .people-are-talking {
+        min-width: 1380px;
+        border: 1px solid #645766;
+        width: 100%;
+        height: 100%;
+        padding-top: 108px;    
+        background-image: url("/img/people-are-talking-bg.png");
+        background-repeat: no-repeat;
+        background-size: 110% 110%;
+        background-position: center;        
+    
+        .peolpe-are-talking__title {
+            @include fontParameters(700, 48px, 50px, #FFFFFF);
+            margin-bottom: 82px;
+        }
+    
+        .grid-container {
+            width: auto;
+            height: 524px;
+            margin-left: 71px;
+            margin-right: 71px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0px 87px;
+            margin-bottom: 0;
+    
+            .grid-container__item {
+                /* height: 1; */
+                width: auto;
+                margin: 0;           
+                
+                .logo1 {
+                    width: 165px;
+                    height: 43px;
+                    margin-bottom: 33px;
+                }
+    
+                .logo2 {
+                    width: 148px;
+                    height: 50px;
+                    margin-bottom: 29px;
+                }
+    
+                .logo3 {
+                    width: 64px;
+                    height: 64px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo4 {
+                    width: 225px;
+                    height: 24px;
+                    margin-top: 0;
+                    margin-bottom: 33px;
+                }
+    
+                .logo5 {
+                    width: 166px;
+                    height: 34px;
+                    margin-bottom: 22px;
+                }
+    
+                .logo6 {
+                    width: 108px;
+                    height: 34px;
+                    margin-bottom: 30px;
+                }
+    
+                .text {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    @include LatoItalic;
+                    @include fontParameters (700, 16px, 24px, #FFFFFF);
+                }
+    
+                .text1, .text2, .text3, .text4, .text5, .text6 {
+                    @include text;   
+                }
+            }    
+        }
+    
+        .bottom-note {
+            @include LatoFont;
+            @include fontParameters (400, 14px, 21px, #A291A5);
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 19px;
+            width: 887px;
+            height: auto;
+            height: 37px;
+            &::after {
+                content: "";
+                margin: auto;
+                margin-top: 14px;               
+                width: 780px;
+                border-bottom: 2px solid #A291A5;
+            }
+        }
+    }
+}

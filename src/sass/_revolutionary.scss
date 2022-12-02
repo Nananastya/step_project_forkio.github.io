@@ -1,0 +1,150 @@
+@import "./variables";
+@import "./mixins";
+
+
+@media (max-width: 480px){
+    .revolutionary-container{
+        min-width: 320px;
+        padding: {
+            left: 10px;
+            right: 10px;
+        };
+        margin: 0 auto;
+        .h1{
+            @include MontserratFont;
+            @include fontParameters ($fw: 700, $fs: 26px, $lh: 28px, $color: #635C73);
+            text-align: center;
+            text-transform: uppercase;
+            margin: 80px 0 27px 0;
+        }
+        .lato-span{
+            @include LatoFont;
+            @include fontParameters ($fw: 400, $fs: 14px, $lh: 20px, $color: #323232);
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .btns{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 120px;
+            .btns__item{
+                border: 1px solid gray;
+                border-radius: 5px;
+                cursor: pointer;
+                color: #24292F;
+                display: flex;
+                background-color: #c5cace ;
+                .btns__item_background{
+                    
+                    display: flex;
+                    padding: 5px;
+                    
+                    .btns__item__text{
+                        font-weight: bold;
+                        color: #24292F;
+                        margin-left: 3px;
+                    }
+                }
+                .btns__item__num{
+                    border-left: 1px solid gray;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
+                    background-color: #F6F8FA;
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px){
+    .revolutionary-container{
+        padding: {
+            left: 10px;
+            right: 10px;
+        };
+        margin: 0 auto;
+        .h1{
+            @include MontserratFont;
+            @include fontParameters ($fw: 700, $fs: 42px, $lh: 42px, $color: #635C73);
+            text-align: center;
+            text-transform: uppercase;
+            margin: 94px 0 33px 0;
+        }
+        .lato-span{
+            display: block;
+            @include LatoFont;
+            @include fontParameters ($fw: 400, $fs: 21px, $lh: 32px, $color: #323232);
+            margin: 0 auto;
+            margin-bottom: 24px;
+            text-align: center;
+            max-width: 689px;
+        }
+        .btns{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 120px;
+            .btns__item{
+                border: 1px solid gray;
+                border-radius: 5px;
+                cursor: pointer;
+                color: #24292F;
+                display: flex;
+                background-color: #c5cace ;
+                .btns__item_background{
+                    
+                    display: flex;
+                    padding: 5px;
+                    
+                    .btns__item__text{
+                        font-weight: bold;
+                        color: #24292F;
+                        margin-left: 3px;
+                    }
+                }
+                .btns__item__num{
+                    border-left: 1px solid gray;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
+                    background-color: #F6F8FA;
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 993px){
+    .revolutionary-container{
+
+        width: 1380px;
+        padding: {
+            left: 10px;
+            right: 10px;
+        };
+        margin: 0 auto;
+    }
+
+    ._gray {
+        min-width: 1380px;
+        width: auto;
+        
+    }
+
+    .lato-span{
+        display: block;
+        @include LatoFont;
+        @include fontParameters ($fw: 400, $fs: 21px, $lh: 32px, $color: #323232);
+        margin: 0 auto;
+        margin-bottom: 24px;
+        text-align: center;
+        width: auto;
+    }
+}

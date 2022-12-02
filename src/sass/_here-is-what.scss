@@ -1,0 +1,165 @@
+@import "./variables";
+@import "./mixins";
+
+
+@media (max-width: 480px){
+    
+    .container_here-is{
+        min-width: 320px;
+        margin: 0 auto;
+        width: 100vw;
+        text-align: center;
+        padding: {
+            left: 10px;
+            right: 10px;
+        };
+        position: relative;
+        .here-is {
+            @include MontserratFont;
+            @include fontParameters ($fw: 700, $fs: 32px, $lh: 38px, $color: #8D81AC);
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .here-is-img-title {
+            @include MontserratFont;
+            @include fontParameters ($fw: 400, $fs: 16px, $lh: 16px, $color: #323232);
+            margin: {
+                top: 27px;
+                bottom: 14px;
+            }
+        }
+        .here-is-text{
+            @include LatoFont;
+            @include fontParameters ($fw: 400, $fs: 14px, $lh: 21px, $color: #848E97);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .code {
+            position: relative;
+            width: 100%;
+            right: -10px;
+            bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 481px){
+    .container_here-is{
+        padding: {
+            left: 10px;
+            right: 10px;
+        };
+        position: relative;
+        .here-is {
+            @include MontserratFont;
+            @include fontParameters ($fw: 700, $fs: 42px, $lh: 42px, $color: #8D81AC);
+            text-align: center;
+            margin-bottom: 50px;
+            
+        }
+        .here-is__item{
+            display: flex;
+            margin-bottom: 57px;
+            img{
+                margin-left: 20px;
+            }
+            .here-is__item_margin23{
+                margin-right: 23px;
+            }
+            .here-is__item_margin43{
+                margin-right: 43px;
+            }
+            .here-is__item_margin58{
+                margin: {
+                    left: 36px;
+                    right: 58px;
+                }
+            }
+            .here-is__item_margin52{
+                margin: {
+                    left: 31px;
+                    right: 52px;
+                }
+            }
+            .here-is-img-title {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 16px, $lh: 21px, $color: #323232);
+                &:not(:first-child){
+                    margin-bottom: 15px;
+                }
+            }
+            .here-is-text{
+                @include LatoFont;
+                @include fontParameters ($fw: 400, $fs: 14px, $lh: 21px, $color: #848E97); 
+            }
+            
+        }
+        .code {
+            position: relative;
+            width: 100%;
+            right: -10px;
+            bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 993px){
+    ._gray{
+        background-color: #F4F4F4;
+        
+        .container_here-is{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            padding: {
+                left: 10px;
+                right: 10px;
+                top: 94px;
+                bottom: 33px;
+            }
+            grid-template:
+                "list title"
+                "list img";
+            grid-template-columns: 2fr 1fr; 
+            .here-is__list{
+                grid-area: list;
+                .here-is__item{
+                    display: flex;
+                    margin-bottom: 35px;
+                    .here-is__item_margin23{
+                        width: 111px;
+                        height: 64px;
+                    }
+                    .here-is__item_margin43{
+                        width: 90px;
+                        height: 80px;
+                    }
+                    .here-is__item_margin58{
+                        width: 60px;
+                        height: 84px;
+                    }
+                    .here-is__item_margin52{
+                        width: 71px;
+                        height: 71px;
+                    }
+                }
+            }
+            .here-is {
+                @include fontParameters ($fw: 700, $fs: 40px, $lh: 50px, $color: #8D81AC);
+                grid-area: title;
+                padding-left: 49px;
+                justify-self: center;
+                width: max-content;
+                margin-bottom: 0;
+            }
+            .code{
+                grid-area: img;
+                width: 100%;
+                justify-self: flex-end;
+                align-self: end;
+                padding-left: 49px;
+            }
+        }
+        
+    }
+}

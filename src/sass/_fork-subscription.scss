@@ -1,0 +1,281 @@
+@import "./variables";
+@import "./mixins";
+
+
+@media (max-width: 480px){
+    .fork-title{
+        @include MontserratFont;
+        @include fontParameters ($fw: 700, $fs: 28px, $lh: 42px, $color: #ffffff);
+        text-align: center;
+        padding-top: 14px;
+        margin: {
+            top: 14px;
+            bottom: 32px;
+        }
+    }
+    .cards {
+        .cards__item{
+            &:not(:last-child){
+                margin-bottom: 18px;
+            }
+            &:nth-child(3){
+                margin: {
+                    top: 5px;
+                    bottom: 94px;
+                }
+            }
+            .cards__item__title,
+            .cards__item__title_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                text-transform: uppercase;
+                padding: 39px 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .cards__item__title{
+                width: 257px;
+                background-color: rgb(255, 255, 255, 0.06);
+            }
+            .cards__item__title_dark{
+                width: 299px;
+                background-color: rgba(60, 45, 61, 0.84);
+            }
+            
+            .cards__item__data,
+            .cards__item__data_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                margin: 0 auto;
+                .cards__item__price{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 60px, $lh: 62px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                .cards__item__per-month{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 14px, $lh: 16px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 60px;
+                        background-color: #8D81AC;
+                        margin: {
+                            top: 38px;
+                            bottom: 30px;
+                            left: auto;
+                            right: auto;
+                        }
+                    }
+                }
+                
+                .cards__item__personal-licence,
+                .cards__item__personal-licence_top,
+                .cards__item__personal-licence_bottom{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 16px, $lh: 18px, $color: #ffffff);
+                }
+                .cards__item__personal-licence_top{
+                    margin-top: 30px
+                }
+                .cards__item__personal-licence_bottom{
+                    margin-bottom: 48px;
+                }
+                .cards__item__button{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 15px, $lh: 15px, $color: #ffffff);
+                    display: block;
+                    text-decoration: none;
+                    padding: 15px 38px;
+                    border-radius: 30px;
+                    width: 163px;
+                    background-color: rgb(255, 255, 255, 0.15);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin: auto;
+                    align-self: end;
+                }
+            }
+            .cards__item__data{
+                position: relative;
+                height: 360px;
+                width: 257px;
+                padding-top: 30px;
+                padding-bottom: 36px;
+                background-color: rgb(255, 255, 255, 0.11);
+                .cards__item__button{
+                    position: absolute;
+                    bottom: 37px;
+                    left: 19%;
+                }
+            }
+            .cards__item__data_dark{
+                height: 430px;
+                padding-top: 14px;
+                padding-bottom: 47px;
+                width: 299px;
+                background-color: rgb(0, 0, 0, 0.19);
+                .cards__item__button{
+                    margin-top: 83px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px){
+    .container {
+        overflow: hidden;
+    }
+
+    .fork-title{
+        @include MontserratFont;
+        @include fontParameters ($fw: 700, $fs: 28px, $lh: 42px, $color: #ffffff);
+        text-align: center;
+        margin: {
+            top: 88px;
+            bottom: 39px;
+        }
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 299px 257px;
+        grid-template-rows: 457px 560px;
+        margin-bottom: 94px;
+        justify-content: center;
+        align-items: center;
+        padding-right: 35px;
+        gap: 25px;
+        .cards__item{
+            display: block;
+            width: 257px;
+            &:nth-child(3){
+                margin: {
+                    top: 30px;
+                }
+                width: 299px;
+            }
+            &:first-child{
+                justify-self: end;
+            }
+            .cards__item__title,
+            .cards__item__title_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                text-transform: uppercase;
+                padding: 39px 0;
+                margin: 0 auto;
+            }
+            .cards__item__title{
+                width: 257px;
+                background-color: rgb(255, 255, 255, 0.06);
+            }
+            .cards__item__title_dark{
+                width: 299px;
+                background-color: rgba(60, 45, 61, 0.84);
+            }
+            
+            .cards__item__data,
+            .cards__item__data_dark {
+                @include MontserratFont;
+                @include fontParameters ($fw: 400, $fs: 24px, $lh: 24px, $color: #ffffff);
+                margin: 0 auto;
+                .cards__item__price{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 700, $fs: 60px, $lh: 90px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                .cards__item__per-month{
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 14px, $lh: 16px, $color: #ffffff);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        width: 60px;
+                        background-color: #8D81AC;
+                        margin: {
+                            top: 38px;
+                            bottom: 30px;
+                            left: auto;
+                            right: auto;
+                        }
+                    }
+                }
+                
+                .cards__item__personal-licence,
+                .cards__item__personal-licence_top,
+                .cards__item__personal-licence_bottom{
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 16px, $lh: 18px, $color: #ffffff);
+
+                }
+                .cards__item__personal-licence_top{
+                    margin-top: 30px;
+                }
+                .cards__item__personal-licence_bottom{
+                    margin-bottom: 48px;
+                }
+                .cards__item__button{
+                    
+                    @include MontserratFont;
+                    @include fontParameters ($fw: 400, $fs: 15px, $lh: 15px, $color: #ffffff);
+                    display: block;
+                    text-decoration: none;
+                    padding: 15px 38px;
+                    border-radius: 30px;
+                    width: 163px;
+                    background-color: rgb(255, 255, 255, 0.15);
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin: auto;
+                    align-self: end;
+                }
+            }
+            .cards__item__data{
+                position: relative;
+                height: 370px;
+                width: 257px;
+                padding-top: 30px;
+                background-color: rgb(255, 255, 255, 0.11);
+                .cards__item__button{
+                    position: absolute;
+                    bottom: 37px;
+                    left: 19%;
+                }
+            }
+            .cards__item__data_dark{
+                height: 430px;
+                padding-top: 14px;
+                padding-bottom: 47px;
+                width: 299px;
+                background-color: rgb(0, 0, 0, 0.19);
+                .cards__item__button{
+                    margin-top: 83px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 993px){
+    .cards{
+        grid-template-columns: 257px 257px 299px 257px;
+        grid-template-rows: auto;
+    }
+}

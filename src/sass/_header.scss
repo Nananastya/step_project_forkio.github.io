@@ -1,0 +1,128 @@
+@import "./variables";
+@import "./mixins";
+
+.container {
+    padding-right: 10px;
+    padding-left: 10px;
+    min-width: 320px;
+    
+}
+
+.header {
+    
+    min-width: 320px;
+    text-align: center;
+    background-color: #27262A;
+    
+    .nav {
+        height: 103px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .buy-now__btn {
+            width: 119px;
+            height: 37px;
+            background-color: $btnBackground;
+            border-radius: 40px;
+            padding-top: 11px;
+            @include fontParameters(700, 15px, 15px, $btnColor);
+            &:hover {
+                background-color: $btnBackgroundHover;
+                color: $btnColorHover;
+            }
+        }
+
+        .burger-menu_logo {
+            cursor: pointer;
+            @include menuLogo;
+
+        }
+
+        .x {
+            cursor: pointer;
+            @include menuLogo;
+        }
+    }
+
+}
+
+.burger-menu {
+    top: 0;
+    left: 13px;
+    width: 292px;
+    height: 364px;
+    position: absolute;
+    background-color: #333333;
+    .burger-menu__item {
+        @include fontParameters (400, 26px, 26px, $btnColor);
+        &:hover {
+            color: $btnColorHover;
+        }
+        display: block;        
+        height: 88px;
+        padding-top: 29px;
+        border-bottom: 3px solid #3a3a3a;
+        color: $btnColor;
+    }
+}
+
+
+
+.section-one {
+    position: relative;
+    min-width: 320px;
+    text-align: center;
+    .main {
+        
+        height: 614px;
+        padding-top: 50px;
+        background-image: url(./img/img3.png);
+        background-position: center;  
+        background-size: contain;
+    
+        
+        .main__title {
+            @include fontParameters(700, 48px, 48px, #FFFFFF);
+            
+        }   
+    
+        .main__subtitle {
+            @include fontParameters(400, 18px, 24px, #8D81AC);
+            margin-top: 19px;
+        }
+    
+        .main__note {
+            @include fontParameters(400, 14px, 14px, #848E97);
+            margin-top: 14px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+
+    }
+
+}
+
+.download__btn {
+    position: absolute;
+    top: 590px;
+    right: 14px;
+    width: 290px;
+    height: 45px;
+    padding-top: 13px;
+    background-color: $btnBackground;
+    border-radius: 40px;
+    @include fontParameters(700, 18px, 20px, $btnColor);
+    &:hover {
+        background-color: $btnBackgroundHover;
+        color: $btnColorHover;
+    }
+
+}
+
+.unlimited {
+    margin-top: 36px;
+    @include fontParameters(400, 14px, 14px, #848E97)
+}
