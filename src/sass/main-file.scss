@@ -346,7 +346,7 @@ body {
                     background-image: url("./img/Logo.png");
                     @include bg-center;
                     &:hover {
-                        background-image: url("./img/Logo-hover.png");
+                        background-image: url("./img/logo-hover.png");
                         @include bg-center;
                     }
                 }
@@ -621,7 +621,7 @@ body {
                     background-image: url("./img/Logo.png");
                     @include bg-center;
                     &:hover {
-                        background-image: url("./img/Logo-hover.png");
+                        background-image: url("./img/logo-hover.png");
                         @include bg-center;
                     }
                 }
