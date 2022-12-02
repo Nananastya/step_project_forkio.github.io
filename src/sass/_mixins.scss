@@ -29,7 +29,6 @@
 @mixin pseudo {
     content: "";
     position: absolute;
-    
     left: 3px;
     border-left: 8px solid #8D81AC;
     display: inline-block;
