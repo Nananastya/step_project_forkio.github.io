@@ -38,14 +38,14 @@
 }
 
 @mixin logo {
-    background-image: url("./dist/img/Logo.png");
+    background-image: url("./img/Logo.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 @mixin logo-hover {
-    background-image: url("./dist/img/Logo-hover.png");
+    background-image: url("./img/Logo-hover.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
